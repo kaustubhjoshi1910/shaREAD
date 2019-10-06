@@ -1,0 +1,374 @@
+/* Dropdown Button */
+
+@font-face {
+  font-family: 'ralewayblack';
+  src: url('../stylesheets/raleway-black-webfont.woff2') format('woff2'),
+        url('../stylesheets/Raleway-Regular.ttf') format('truetype'),
+       url('../stylesheets/raleway-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+html,body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Raleway;
+}
+.dm{
+  margin-top: 2%;
+}
+h4{
+  font-size: 3em;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 50%;
+  float: left;
+}
+.delivery{
+  width: 50%;
+  float: right;
+}
+.contain{
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #ced3e0;
+  border-radius: 15px;
+  margin-bottom: 2%;
+}
+.container-fluid{
+  border: none;
+  background-color: #a7f25c;
+}
+hr.style-one {
+border: 0;
+height: 1px;
+background: #333;
+background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+.box8 .icon,.box8 .title{margin:0;position:absolute}
+.box8{box-shadow:0 0 3px rgba(0,0,0,.3);position:relative}
+.box8 img{width:100%;height:auto}
+.box8 .box-content{width:100%;height:100%;background:rgba(0,0,0,.6);opacity:0;position:absolute;top:0;left:0;transform:perspective(400px) rotateX(0deg);transform-origin:center top 0;transition:all .5s ease 0s}
+.box8 .icon li a,.box8 .title{background:#ef4050;font-size:20px;color:#fff}
+.box8:hover .box-content{opacity:1;transform:perspective(400px) rotateX(0)}
+.box8 .title{padding:5px 7px;border-radius:5px;font-weight:600;bottom:20px;left:20px;transition:all .9s ease 0s}
+.box8 .icon li a,.box9 .box-content,.box9 .icon li,.box9 img{transition:all .35s ease 0s}
+/*.box8:hover .title{bottom:-40px}*/
+.box8 .icon{list-style:none;padding:0;top:42%;left:0;right:0}
+.box8 .icon li a{display:block;text-align: center; width:100px;height:40px;line-height:40px;border-radius:20px;margin-right:7px}
+.box9 .icon,.box9 .title{width:100%;font-size:22px}
+.box8 .icon li a:hover{background:#fff;color:#000}
+@media only screen and (max-width:990px){.box8{margin-bottom:20px}
+}
+.content1 {
+  width: 42vw;
+  height: 37vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-wrapper {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider{
+  height: 60px;
+  padding-left:15px;
+  overflow: hidden;
+}
+.slider div {
+  color:#fff;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider-text1 {
+  background: lightgreen;
+  animation: slide 3s linear infinite;
+}
+.slider-text2 {
+  background: skyblue;
+}
+.slider-text3 {
+  background: lightcoral;
+}
+.slider-text4 {
+  background: #f2c191;
+}
+@keyframes slide {
+  0% {margin-top:-400px;}
+  5% {margin-top:-300px;}
+  25% {margin-top:-300px;}
+  30% {margin-top:-200px;}
+  50% {margin-top:-200px;}
+  55%  {margin-top: -100px;}
+  75% {margin-top: -100px;}
+  80% {margin-top:0px;}
+  100% {margin-top:0px;}
+}
+@media screen and (max-width: 810px){
+  .content1{
+    display: none;
+  }
+}
+.pad{
+  padding: 10%;
+}
+.round{
+  border: none;
+  border-radius: 100px;
+}
+.pad5{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.dropbtn {
+  background-color: #fb5726;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  font-family: Raleway Black, Helvetica, sans-serif;
+
+}
+.xinput{
+margin: 2%;
+}
+.shadow{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h2 {
+  color: blue;
+  text-shadow: 3px;
+  position: absolute;
+  top: 15px;
+  right: 245px;
+  font-size: 25px;
+  font-style: bold;
+  font-family: Raleway Black, Helvetica, sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 24px;
+  background-color: #f2f2b5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: Raleway Black, Helvetica, sans-serif;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+#myFooter {
+    background-color: #3c3d41;
+    color: white;
+    padding-top: 30px;
+}
+
+#myFooter .footer-copyright {
+    background-color: #333333;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+}
+
+#myFooter .navbar-brand {
+    margin-top: 45px;
+    height: 65px;
+}
+
+#myFooter .footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter h2 a{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+    font-size: 32px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+    color: #0077e2;
+}
+
+#myFooter .google:hover {
+    color: #ef1a1a;
+}
+
+#myFooter .twitter:hover {
+    color: #00aced;
+}
+
+#myFooter .btn {
+    color: white;
+    background-color: #d84b6b;
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+}
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.content{
+   flex: 1 0 auto;
+   -webkit-flex: 1 0 auto;
+   min-height: 200px;
+}
+
+#myFooter{
+   flex: 0 0 auto;
+   -webkit-flex: 0 0 auto;
+}
+
+
+
+
+.resbox{
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: row;
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  float: left;
+
+}
+@media screen and (max-width: 768px){
+  .resbox{
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: row;
+  -ms-flex: 0 0 48%;
+  flex: 0 0 48%;
+  max-width: 48%;
+  }
+}
+@media screen and (max-width: 300px){
+  .resbox{
+  margin-left: 1%;
+  margin-right: 1%;
+  padding-top: 15px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: row;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  }
+}
+.vector{
+  padding-bottom: 5%;
+  max-height: 150px;
+  max-width: 200px;
+  float: center;
+}
+}

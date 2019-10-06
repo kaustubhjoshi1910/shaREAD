@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="icon" href="../images/xlogo.png">
+<meta name="theme-color" content="#A7F25C">
+<meta name="msapplication-navbutton-color" content="#A7F25C">
+<meta name="apple-mobile-web-app-status-bar-style" content="#A7F25C">
+
+   <style>
+        h4{
+            margin: 5%;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body style="font-family: Raleway black; background-color: #e2e2e2;">
+	<nav class="navbar navbar-default" style="background-color:#A7F25C">
+  		<div class="container-fluid xnav">
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+  					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  					<span class="sr-only">Toggle navigation</span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+  				<a class="navbar-brand" href="#" style="font-weight:bold;">Xappal</a>
+  			</div>
+  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  				<ul class="nav navbar-nav">
+  					<li class="active">
+  						<!-- <a href="#" style="color: white">About <span class="sr-only">(current)</span></a> -->
+  					</li>
+  					<li><a href="/home">Contact</a></li>
+  					<li class="dropdown">
+  						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+  							aria-expanded="false" id="address">Select College <span class="caret"></span></a>
+  						<ul class="dropdown-menu">
+  							<li><a href="#" onclick="selloc('IIT')">IIT</a></li>
+  							<li><a href="#" onclick="selloc('NLU')">NLU</a></li>
+  							<li><a href="#" onclick="sellloc('NIFT')">NIFT</a></li>
+  							<li><a href="#" onclick="selloc('FDDI')">FDDI</a></li>
+  						</ul>
+  					</li>
+  					<li class="dropdown" style="color: white">
+  						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+  							aria-expanded="false" style="color: white" id="timesel">Select Time <span class="caret"></span></a>
+  						<ul class="dropdown-menu" style="color: white">
+  							<li id="time2"><a href="#" onclick="timedev(2)" style="color: black">2pm</a></li>
+  							<li id="time5"><a href="#" onclick="timedev(5)" style="color: black" >5pm</a></li>
+  							<li id="time7" ><a href="#" onclick="timedev(7)" style="color: black" >7pm</a></li>
+  							<li  id="time10"><a href="#" onclick="timedev(10)" style="color: black">10pm</a></li>
+  						</ul>
+  					</li>
+  				</ul>
+  				<form class="navbar-form navbar-left" role="search">
+  					<div class="form-group">
+  						<input type="text" class="form-control" placeholder=" food, restaurants ">
+  					</div>
+  					<button type="submit" class="btn btn-default rad">Search</button>
+  				</form>
+  				<ul class="nav navbar-nav navbar-right">
+  						<% if(!currentUser){%>
+  					<li><a href="/register">Sign up</a></li>
+  					<li><a href="/login">Log in</a></li>
+  					<%}else{%>
+
+  					<li><a href="#">Signed in as <%=currentUser.username%></a></li>
+  					<li><a href="/logout">Log out</a></li>
+  					<%}%>
+  				  </ul>
+  			</div>
+  		</div>
+  	</nav>	
+<div class="container" style="border-radius: 50px; border: none; background-color: white; padding: 5%; text-align: center">
+	<h1>
+		1All the help you need
+	</h1>
+
+	<h3>
+		2Help 1 blu bla blee bla bleh
+	</h3>
+	<h4>
+	3Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+</h4>
+<h3>
+		4Help 1 blu bla blee bla bleh
+	</h3>
+	<h4>
+	5Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+Help 1 blu bla blee bla bleh
+	Help 1 blu bla blee bla bleh
+</h4>
+<h3>
+		6Help 1 blu bla blee bla bleh
+	</h3>
+<h4>
+		7Help 1 blu bla blee bla bleh
+	</h4>
+
+</div>
+
+    <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+				<a href="#"><img src="../public/images/mainlogo.png" width="200px"></a>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-default">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2019 Copyright </p>
+        </div>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

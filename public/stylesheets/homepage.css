@@ -1,0 +1,123 @@
+body{
+	margin: 0;
+	background-image: url("https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+	width: 100%;
+	max-height: auto;
+	font-family: Raleway;
+}
+@media (max-width: 768px){
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+body{
+	background-image: url("https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  
+}
+
+@font-face {
+	font-family: 'ralewayblack';
+	src: url('../stylesheets/raleway-black-webfont.woff2') format('woff2'),
+		  url('../stylesheets/Raleway-Regular.ttf') format('truetype'),
+		 url('../stylesheets/raleway-black-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+  
+  }
+#mainlogo{
+	vertical-align: middle;
+	text-align: center;
+	max-width: 500px;
+	max-height: 300px;
+  }
+ .hbtn{
+ 	background-color: brown;
+ 	color: white;
+ }
+.vector{
+	display: none;
+}
+}
+
+.homeimage{
+	float:left;
+	width: 60%;
+}
+.home{
+	background-color: rgba(0,0,0,0.5);
+	height: auto;
+	min-height: 100%;
+	min-width: 100%;
+}
+nav.navbar{
+	border: none;
+	/* background-image: linear-gradient(120deg,rgb(0, 197, 0),rgb(110, 241, 22)) */
+	background-color: rgba(1, 1, 1, 0.5);
+	border-bottom: solid 2px white;
+}
+.navbar-default .navbar-nav>li>a  {
+	color: white;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: transparent;
+}
+.navbar-brand>a{
+    color: white;
+	padding-left: 10px;
+
+}
+.navbar-brand>a:hover{
+    color: white;
+	padding-left: 10px;
+
+}
+.desc{
+	margin-left: 3%;
+	margin-right: 3%;
+	color: white;
+}
+
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+.welcome{
+	color: white;
+	text-align: center;
+	justify-content: center;
+	padding: 3%;
+	margin: 0 auto;
+}
+button.navbar-togggle{
+	background-color: white;
+}
+p{
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.vector{
+	display: none;
+	border-radius: 50px;
+	padding-top: 1%;
+	padding-bottom: 5%; 
+	max-height: 150px;
+	max-width: 200px;
+	float: center; 
+	background-image: linear-gradient(120deg,#a7f25c,#fb5726); 
+	opacity: 0.6;
+	background-blend-mode: screen;
+}
+.about{
+	background-color: #3c3d41;
+	border: none;
+	color: white;
+
+}
+.college{
+	background-color: rgba(0,0,0,0.6);
+	padding: 2%;
+	border-radius: 50px;
+	font-family: raleway black;
+	font-weight: 900;
+}

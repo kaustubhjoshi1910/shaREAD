@@ -1,0 +1,162 @@
+<head>
+  <title>Xappal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../public/stylesheets/homepage.css">
+<link rel="stylesheet" type="text/css" href="../public/stylesheets/footer.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family: Raleway Black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+">
+    
+      
+        <!-- <div>
+          <div class="col-sm-7 col-md-7 col-sm-7 col-xs-7">
+            </div>
+          <div>
+            <form action="/signbutton" method="POST"><button class="btn btn-primary btn-lg" style="border-radius: 32px">Sign up <i class="fa fa-user-plus"></i></button></form>
+          </div>
+          </div> -->
+        
+     <!--   <div class="row pad">
+            <div class="content1">
+        <div class="slider-wrapper">
+          WE deliver to
+          <div class="slider">
+              <div class="slider-text1 shadow">IIT</div>
+              <div class="slider-text2 shadow">NLU</div>
+              <div class="slider-text3 shadow">FDDI</div>
+              <div class="slider-text4 shadow">NIFT</div>
+          </div>
+        </div>       
+      </div>
+
+      </div> -->
+ 
+
+<div class="home" style="">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="homepage.html" style="color: white;font-weight:bold;">Xappal</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color: white;">Contact</a></li>          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <% if(!currentUser){%>
+            <li><form action="/logbutton" method="POST"><button class="btn " style="border-radius: 32px;margin-top: 10px;margin-left: 10px">Log in <span><i class="fa fa-user"></i></span></button>
+            </form></li>
+            <li><form action="/signbutton" method="POST"><button class="btn " style="border-radius: 32px;margin-top: 10px;margin-left: 10px">Sign up <span><i class="fa fa-user-plus"></i></span></button>
+            </form></li>
+          <!-- <li><a href="/register" style="color: white;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/login" style="color: white;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+          <%}else{%>
+
+          <li><a href="#" id="Sign" style="color: white;">Signed in as <%=currentUser.username%></a></li>
+          <li><a href="/logout" style="color: white;">Log out</a></li>
+          <%}%>
+          </ul>
+      </div>
+    </div>
+  </nav>
+<div class="welcome">
+  <div>
+    <img src="../public/images/mainlogo.png">
+  </div>
+  <h2>Order Food you Love</h2>
+   
+</div>
+<div class="row desc"> 
+  <div class="col-lg-4 col-md-4 col-sm-12"><h3> What we do</h3> <h4>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla lacus, lacinia non enim eu, pharetra vehicula ex. Integer ante magna, congue sed lacus sit amet, imperdiet imperdiet lorem. Aenean mattis metus quis mauris cursus, quis pharetra mi </h4></div>
+  <div class="col-lg-4 col-md-4 col-sm-12"><h3> Our initiative</h3> <h4>
+     commodo. Proin tempor enim consequat, porttitor nunc vulputate, iaculis ligula. Sed vitae odio vitae sem dictum posuere nec eget sapien. Vivamus cursus augue bibendum magna consectetur bibendum. Donec lacinia augue ac tellus malesuada blandit. Proin  </h4></div>
+  <div class="col-lg-4 col-md-4 col-sm-12"><h3> We deliver to</h3> <h4>
+     purus neque, vestibulum nec nibh non, euismod lacinia libero. Aenean a ullamcorper massa. Suspendisse ullamcorper nulla tortor, blandit cursus dolor ultrices a. Proin dapibus risus neque, eget.
+    </h4> </div>
+</div>
+
+  <hr>
+  
+  <div class="row vectorparent">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="text-align: center;">
+        <img src="../public/images/burger_drink.svg" class="vector">
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="text-align: center;">
+        <img src="../public/images/pizza2.svg" class="vector">
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="text-align: center;">
+        <img src="../public/images/popcorn.svg" class="vector">
+    </div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="text-align: center;">
+        <img src="../public/images/fries.svg" class="vector">
+    </div>
+
+</div>
+</div>
+
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+				<a href="#"><img src="../public/images/mainlogo.png" width="200px"></a>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="\home">Home</a></li>
+                        <li><a href="\register">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-default">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2019 Copyright </p>
+        </div>
+    </footer>
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

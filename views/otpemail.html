@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<title>Verify OTP</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+		<style>
+	.resend{
+		position: absolute;
+		top: 300px;
+		left: 40%;
+		right: 35%;
+		text-decoration: none;
+		color: black;
+
+		}
+	.pos{
+		position: absolute;
+		top: 240px;
+		margin-left: 10%;
+		margin-right: 10%;
+		width: 20%;
+		height: 10%;
+	}
+	.form-control1 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  right: 25%;
+  display: block;
+  width: 50%;
+  height: 30px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+	.codebox{
+		position: absolute;
+		top: 120px;
+		left: 35%;
+		right: 35%;
+		width: 30%;
+		height: 12%;
+		background-color: white;
+		border-radius: 32px;
+	}
+	h4{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		position: absolute;
+		font-family: Raleway Black;
+		font-size: 2.5vw;
+		color: black;
+		text-align: center;
+		left: 5%;
+		right: 5%;
+		top: 15%;
+		}
+	h3{
+		position: absolute;
+		font-family: Raleway Black;
+		font-size: 3.7vw;
+		color: white;
+		text-align: center;
+		left: 20%;
+		right: 20%;
+		top: 5%;
+
+	}
+		.mainbox{
+			position: absolute;
+			left: 10%;
+			top: 80px;
+			width: 80%;
+			height: 60%;
+			border-radius: 200px;
+			background-image: linear-gradient(purple,red)
+		}
+		.div1{
+			position: relative;
+			height: 200px;
+			width: 300px;
+			top: 3%;
+			left: 5%;
+
+			margin: 20px;
+			border-radius: 16px;
+			/*background-image: url("food4.jpg");*/
+			box-shadow: 0 0 0 0.2rem grey;
+			float: left;
+		}
+		.restname{
+			position: relative;
+			font-weight: 400;
+			margin-left: 10px;
+			color: black;
+		}
+	</style>
+</head>
+<body style="font-family: Raleway black">
+ <div>
+<nav class="navbar navbar-default" style="background-color: #A7F25C">
+<div class="container-fluid xnav">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#" style="font-weight:bold;">Xappal</a>
+	</div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li class="active">
+				<!-- <a href="#" style="color: white">About <span class="sr-only">(current)</span></a> -->
+			</li>
+			<li><a href="/home">Contact</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false" id="address">Select College <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#" onclick="selloc('IIT')">IIT</a></li>
+					<li><a href="#" onclick="selloc('NLU')">NLU</a></li>
+					<li><a href="#" onclick="sellloc('NIFT')">NIFT</a></li>
+					<li><a href="#" onclick="selloc('FDDI')">FDDI</a></li>
+				</ul>
+			</li>
+		</ul>
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder=" food, restaurants ">
+			</div>
+			<button type="submit" class="btn btn-default rad">Search</button>
+		</form>
+		<ul class="nav navbar-nav navbar-right">
+				<% if(!currentUser){%>
+			<li><a href="/register">Sign up</a></li>
+			<li><a href="/login">Log in</a></li>
+			<%}else{%>
+
+			<li><a href="#"></a></li>
+			<li><a href="/logout">Log out</a></li>
+			<%}%>
+			</ul>
+	</div>
+</div>
+</nav>
+</div>
+<div>
+
+<div class="mainbox">
+	<h3>
+		OTP Verification
+	</h3>
+	<div class="codebox">
+		<h4>
+		Enter your email
+	</h4>
+	</div>
+	<div class="form-group">
+          <input type="text" class="form-control1" placeholder="email" style="border-radius: 16px">
+
+	</div>
+          <button type="submit" class="btn btn-default pos" style="border-radius: 32px; left: 30%">Submit</button>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

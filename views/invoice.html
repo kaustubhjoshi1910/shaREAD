@@ -1,0 +1,148 @@
+<html>
+ 
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <title>invoice</title>
+        <style type="text/css">
+        body {      
+            font-family: Verdana;
+        }
+         
+        div.invoice {
+        border:1px solid #ccc;
+        padding:10px;
+        height:740pt;
+        width:570pt;
+        }
+ 
+        div.company-address {
+            border:1px solid #ccc;
+            float:left;
+            width:200pt;
+        }
+         
+        div.invoice-details {
+            border:1px solid #ccc;
+            float:right;
+            width:200pt;
+        }
+         
+        div.customer-address {
+            border:1px solid #ccc;
+            float:right;
+            margin-bottom:50px;
+            margin-top:100px;
+            width:200pt;
+        }
+         
+        div.clear-fix {
+            clear:both;
+            float:none;
+        }
+         
+        table {
+            width:100%;
+        }
+         
+        th {
+            text-align: left;
+        }
+         
+        td {
+        }
+         
+        .text-left {
+            text-align:left;
+        }
+         
+        .text-center {
+            text-align:center;
+        }
+         
+        .text-right {
+            text-align:right;
+        }
+         input,
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 32px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+        </style>
+    </head>
+ 
+    <body>
+	<center>
+	
+<button onclick="myFunction()" class="btn">Print</button>
+    <div class="invoice">
+        <div class="company-address">
+            whatever name 
+            <br />
+            adress1
+            <br />
+            adress 2
+            <br />
+        </div>
+     
+        <div class="invoice-details">
+            Invoice No: 564
+            <br />
+            Date
+        </div>
+         
+        <div class="customer-address">
+            To:
+            <br />
+            Name 
+            <br />
+            customer address
+        </div>
+         
+        <div class="clear-fix"></div>
+            <table border='1' cellspacing='0'>
+                <tr>
+                    <th width=250>Description</th>
+                    <th width=80>Amount</th>
+                    <th width=100>Unit price</th>
+                    <th width=100>Total price</th>
+                </tr>
+                     <tr>
+                     <td>description</td>
+                     <td class='text-center'>amount</td>
+                     <td class='text-right'>Rs. unit_price</td>
+                     <td class='text-right'>total=unit*amount</td>
+                     </tr>
+             <tr>
+             <td colspan='3' class='text-right'>Sub total</td>
+             <td class='text-right'>subtotal+=total</td>
+             </tr>
+             <tr>
+             <td colspan='3' class='text-right'>VAT</td>
+             <td class='text-right'>rs.</td>
+             </tr>
+             <tr>
+             <td colspan='3' class='text-right'><b>TOTAL</b></td>
+             <td class='text-right'><b>rs.</b></td>
+             </tr>
+            </table>
+        </div>
+	</center>	
+    </body>
+ <script>
+function myFunction() {
+  window.print();
+}
+</script>
+</html>

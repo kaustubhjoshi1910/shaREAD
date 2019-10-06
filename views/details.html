@@ -1,0 +1,200 @@
+<head>
+  <title>Address</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/homepage.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="..public/stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="..public/stylesheets/menustyle.css">
+
+<style>
+body {
+  font-family: Raleway Black, Helvetica, sans-serif;
+  background-color: #d7e0ef;
+
+}
+input,
+.tn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 32px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+input[type=submit] {
+  background-color: #ff8026;
+  color: white;
+  cursor: pointer;
+  font-family: Raleway black;
+
+}
+
+input[type=submit]:hover {
+  background-color: #d64d1b;
+}
+
+
+
+</style>
+</head>
+<body>
+   <div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid xnav">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style="font-weight:bold;">Xappal</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <!-- <a href="#" style="color: white">About <span class="sr-only">(current)</span></a> -->
+          </li>
+          <li><a href="mailto:xappalcare@gmail.com">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false" id="address">Select College <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" onclick="selloc('IIT')">IIT</a></li>
+              <li><a href="#" onclick="selloc('NLU')">NLU</a></li>
+              <li><a href="#" onclick="sellloc('NIFT')">NIFT</a></li>
+              <li><a href="#" onclick="selloc('FDDI')">FDDI</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder=" food, restaurants ">
+          </div>
+          <button type="submit" class="btn btn-default rad">Search</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <% if(!currentUser){%>
+          <li><a href="/register">Sign up</a></li>
+          <li><a href="/login">Log in</a></li>
+          <%}else{%>
+
+          <li><a href="#"></a></li>
+          <li><a href="/logout">Log out</a></li>
+          <%}%>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div>
+	<center>
+	<div class="container contain">
+		<h4>Enter Your Address</h4>
+		<p>We are delivering at 'college name'</p>
+        <form action="restaurant.php" method="post">
+        <input type="text" name="name" placeholder="flat no." required>
+        <input type="text" name="desc" placeholder="room no." required>
+		<span style="color:grey;">OR</span><br>
+		<p>Add new address</p>
+        <input type="text" name="name" placeholder="college name" required>
+        <input type="text" name="name" placeholder="location" required>
+        <input type="text" name="username" placeholder="flat no." required>
+        <input type="text" name="password" placeholder="room no." required>
+        <input type="submit" value="Deliver here">
+		</form>
+    </div>
+</div>
+</div>
+</div>
+<div>
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+        <a href="#"><img src="../images/mainlogo.png" width="200px"></a>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="\home">Home</a></li>
+                        <li><a href="\register">Sign up</a></li>
+                        <li><a href="\login">Log in</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    
+ <button data-toggle="modal" data-target="#myModal" class="about"><h5>About Us</h5></button>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content"  style="color: black">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">About US</h4>
+        </div>
+        <div class="modal-body">
+          <p><div>Hostel Mess Food, YUUUCCCKK !!!! </div>
+            <div>
+You all would be very well aware about how <strong>terrifying</strong> it is to have food which is being served in your hostel mess. It is either <strong>unflavoured or unplatable</strong>, everything tastes the same.
+      </div>
+        <div>Oh and your college is at the outskirts of the city so it gets very difficult for you to go out everyday and have good quality of food from the best cafes and restaurants, right?
+Don't worry we've got your back. 
+        </div>
+        <div>Here at Xappal we provide you with the <strong>best food from the best cafes and restaurants</strong> (don't worry we'll not limit you to order food from any local Dhabas near your college in the name of good restaurants) in the town just at a click.
+        </div>
+   
+just select your college, the time slot you want your food to arive in and that's it you're done.
+Hungry? let's Xappal !!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+                    <ul>
+                        <li><a href="mailto:xappalcare@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="tel:9828612482">Give a call</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a target="_blank" href="https://www.twitter.com/xappal1" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/xappalofficial" class="instagram"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2019 Copyright </p>
+        </div>
+    </footer>
+    </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookstores</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+  <link rel="icon" href="../images/xlogo.png">
+<meta name="theme-color" content="#A7F25C">
+<meta name="msapplication-navbutton-color" content="#A7F25C">
+<meta name="apple-mobile-web-app-status-bar-style" content="#A7F25C">
+
+  <style>
+	p{
+		color: black;
+	}
+</style>
+<script type="text/javascript"></script>
+</head>
+<body style="font-family: Raleway;">
+<div style="margin-bottom: 30px;">
+	<nav class="navbar navbar-default navbar-static-top" style="position: fixed;width: 100%">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/home">Xappal</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+			<% if(!currentUser){%>
+        <li><a href="/register">Sign up</a></li>
+		<li><a href="/login">Log in</a></li>
+		<%}else{%>
+
+		<li><a href="#" id="Sign">Signed in as <%=currentUser.username%></a></li>
+		<li><a href="/logout">Log out</a></li>
+		<%}%>
+	  </ul>
+	  <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search for Bookstores " style="border-radius: 16px" id="myInput" onkeyup="myFunction()">
+        </div>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+<div class="container">
+    <%if(error&&error.length>0){%>
+    <div class="alert alert-danger" role="alert">
+            <%=error%>
+          </div>
+          <%}if(success&&success.length>0){%>
+          <div class="alert alert-success" role="alert">
+                <%=success%>
+          </div>
+          <%}%>
+</div>
+<div class="container">
+<h1 style="padding: 3%; font-weight: 800;">
+	Browse Bookstores
+</h1>
+<div class="mt-40">
+            <div class="row mt-30" id="myUL">
+            	 <hr class="style-one">
+               <div class="row">
+            	<%rest.forEach((restro)=>{%>
+                <div class="resbox" style="border-radius: 20px;">
+                    <div class="box8" style="border-radius: 20px">
+                        <img src="<%=restro.image%>" style="border-radius: 20px">
+                        <h3 class="title"><%=restro.name%></h3>
+                        <div class="box-content" style="border-radius: 20px">
+                            <ul class="icon flex">
+                                <li><a href="/index/<%=restro._id%>" style="text-decoration:none;"> Explore </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <%});%>
+
+              </div>
+<div style="height: 10px;width: 200px;"></div>
+
+            </div>
+        </div>
+	</div>
+	<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByClassName("box8");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("h3")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    var sign = document.getElementById("Sign");
+    var bool = true;
+    sign.addEventListener("click",function(){
+      if(bool){
+      sign.textContent = "<%=currentUser.username%>";
+      bool = false;
+      }
+      else{
+      sign.textContent = "Signed in as <%=currentUser.username%>";
+      bool = true;
+      }
+    });
+    </script>
+    <script src="popupS.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
