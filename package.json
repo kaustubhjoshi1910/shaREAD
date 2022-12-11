@@ -16,7 +16,7 @@
     "crypto": "^1.0.1",
     "csurf": "^1.10.0",
     "ejs": "^2.6.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.16.1",
     "faker": "^4.1.0",
